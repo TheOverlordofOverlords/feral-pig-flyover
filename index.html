@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feral Pig 100M — Flyover Race Plan</title>
-  <script type="module" crossorigin src="./assets/index-0e0KlS7e.js"></script>
+  <script type="module" crossorigin src="./assets/index-D97loErm.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-Cqxh7d7B.css">
 </head>
 <body>
@@ -33,6 +33,13 @@
       <label class="ctl">speed <input id="speed" type="range" min="1" max="50" value="10" /><span id="speed-label">10×</span></label>
       <label class="ctl">terrain <input id="exagg" type="range" min="1" max="30" value="15" /><span id="exagg-label">1.5×</span></label>
       <label class="ctl" title="Turn off 3D terrain for slower computers"><input id="lite" type="checkbox" /> lite</label>
+      <label class="ctl" title="Map render resolution — lower is faster on slow computers">quality
+        <select id="quality-select">
+          <option value="1">Full</option>
+          <option value="0.7">Medium</option>
+          <option value="0.5">Low</option>
+        </select>
+      </label>
       <label class="ctl">map
         <select id="basemap-select">
           <option value="sat">Satellite</option>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feral Pig 100M — Flyover Race Plan</title>
+  <script type="module" crossorigin src="./assets/index-0e0KlS7e.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Cqxh7d7B.css">
+</head>
+<body>
+  <div id="app">
+    <div id="map"></div>
+
+    <div id="hud" class="panel">
+      <div class="hud-title"><span id="hud-event">FERAL PIG 100 MILER</span> <span id="hud-plan-label"></span></div>
+      <div class="hud-grid">
+        <div><span class="k">km</span><span class="v" id="hud-km">0.0</span></div>
+        <div><span class="k">elev</span><span class="v" id="hud-ele">–</span></div>
+        <div><span class="k">grade</span><span class="v" id="hud-grade">–</span></div>
+        <div><span class="k">clock</span><span class="v" id="hud-clock">–</span></div>
+        <div><span class="k">elapsed</span><span class="v" id="hud-elapsed">–</span></div>
+        <div><span class="k">sun</span><span class="v" id="hud-sun">–</span></div>
+      </div>
+      <div class="hud-next">
+        <div id="hud-next-name">–</div>
+        <div id="hud-next-detail">–</div>
+        <div id="hud-margin">–</div>
+      </div>
+    </div>
+
+    <div id="controls" class="panel">
+      <button id="btn-play" title="Play/pause flyover">►</button>
+      <label class="ctl">speed <input id="speed" type="range" min="1" max="50" value="10" /><span id="speed-label">10×</span></label>
+      <label class="ctl">terrain <input id="exagg" type="range" min="1" max="30" value="15" /><span id="exagg-label">1.5×</span></label>
+      <label class="ctl" title="Turn off 3D terrain for slower computers"><input id="lite" type="checkbox" /> lite</label>
+      <label class="ctl">map
+        <select id="basemap-select">
+          <option value="sat">Satellite</option>
+          <option value="topo">Topo</option>
+        </select>
+      </label>
+      <label class="ctl">event
+        <select id="event-select">
+          <option value="100m">100 Miler</option>
+          <option value="50k">50K</option>
+        </select>
+      </label>
+      <label class="ctl">plan
+        <select id="plan-select">
+          <option value="0">Goal 32 h</option>
+          <option value="1">Bad day 36 h</option>
+        </select>
+      </label>
+      <button id="btn-splits">Splits</button>
+      <button id="btn-plan">Plan ⚙</button>
+      <button id="btn-report">Report</button>
+    </div>
+
+    <div id="jumps" class="panel"></div>
+
+    <div id="profile-wrap" class="panel">
+      <canvas id="profile"></canvas>
+      <input id="scrub" type="range" min="0" max="10000" value="0" step="1" />
+    </div>
+
+    <div id="splits-panel" class="panel hidden">
+      <div class="panel-head">Splits — both plans
+        <span>
+          <button id="btn-csv" class="mini">CSV</button>
+          <button id="btn-print" class="mini">Print / PDF</button>
+          <button id="splits-close">×</button>
+        </span>
+      </div>
+      <div id="splits-table"></div>
+    </div>
+
+    <div id="plan-panel" class="panel hidden">
+      <div class="panel-head">Plan settings (saved locally) <button id="plan-close">×</button></div>
+      <div id="plan-form"></div>
+    </div>
+
+    <div id="print-sheet"></div>
+
+    <div id="report-panel" class="panel hidden">
+      <div class="panel-head">Build / verification report <button id="report-close">×</button></div>
+      <pre id="report-pre"></pre>
+    </div>
+
+    <div id="attrib">
+      Map © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors,
+      © <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA) ·
+      Imagery © <a href="https://www.esri.com">Esri</a>, Maxar, Earthstar Geographics ·
+      Terrain © <a href="https://registry.opendata.aws/terrain-tiles/">AWS Terrain Tiles / Mapzen</a> (SRTM, NASA) ·
+      Race facts: <a href="https://feralpigultra.com.au">feralpigultra.com.au</a>
+    </div>
+  </div>
+</body>
+</html>
